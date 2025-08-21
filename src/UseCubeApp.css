@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  margin: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+  font-family: 'Jost';
+  background-color: #eeeff1;
+}
+
+p {
+  color: #707070;
+}
+
+.min-h-screen {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  color: #1b1b1d;
+}
+
+/* HEADER STYLE 
+    style must be with white background and cards must be colores with a black shadow 
+*/
+.header-container {
+  /* background-color: orange; */
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.header-icon-container {
+  display: flex;
+}
+
+.header-nav-left {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-left img {
+  width: 40%;
+  object-fit: cover;
+  height: 80%;
+}
+.header-nav-left span {
+  width: 50%;
+  object-fit: cover;
+  height: 80%;
+  position: relative;
+  left: -10px;
+  z-index: 1;
+}
+
+.header-nav-right {
+  align-items: center;
+  height: auto;
+  margin-right: 1.2rem;
+  display: flex;
+}
+.header-nav-links a {
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0 20px;
+  color: black;
+  letter-spacing: 1px;
+
+  text-decoration: none;
+  transition: transform 300ms;
+}
+
+.active {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.header-play-button {
+  font-weight: 500;
+  margin-left: 20px;
+  background-color: #0f0f0f;
+  font-size: 15px;
+  font-family: 'Jost';
+  letter-spacing: 1px;
+  color: #c8c8c8;
+  padding: 10px 45px;
+  border-radius: 20px;
+  border: 0;
+
+  transition: transform 300ms;
+}
+
+.header-play-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  .header-nav-left {
+    margin-left: 0;
+  }
+  .header-nav-left img,
+  .header-nav-left span {
+    width: 30px;
+    height: 30px;
+    left: 0;
+  }
+  .header-nav-right {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-nav-links a {
+    margin: 10px 1.2rem;
+    font-size: 15px;
+  }
+  .header-play-button {
+    padding: 8px 30px;
+    font-size: 14px;
+    margin-left: 0;
+  }
+}
+
+/********************************/
+/*      Main app styling        */
+/********************************/
+.main-use-cube-app {
+  background-color: #ffffff;
+  /* margin-top: 40px; */
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: start;
+  justify-items: flex-start;
+  /* position: relative; */
+
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+
+.main-text-content {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+  margin: auto;
+  padding-left: 40px;
+}
+.main-text-content h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.main-text-content p {
+  margin-right: 4rem;
+  font-size: 20px;
+}
+
+.main-rubiks-cube-image {
+  grid-column: 2;
+  width: 80%;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 1128px) {
+  .main-text-content h2 {
+    font-size: 5vw;
+  }
+  .main-rubiks-cube-image {
+    width: 20vw;
+  }
+  .main-text-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-use-cube-app {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+    padding-top: 120px;
+    margin: 0;
+    justify-items: center;
+  }
+  .main-text-content {
+    grid-column: 1;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .main-text-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+  .main-text-content p {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .main-cube-image {
+    grid-column: 1;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/********************************/
+/*      cube types styling        */
+/********************************/
+.cube-types-container {
+  /* background: linear-gradient(135deg, #EEEFF1 0%, #c8c8c8 100%); */
+  background-color: #eeeff1;
+  margin-top: 0;
+}
+
+.cube-type-sphere-effect {
+  background-color: #eeeff1;
+  position: relative;
+  overflow: hidden;
+}
+
+.cube-types-container img {
+  position: relative;
+  top: -30px;
+}
+
+.cube-types-title {
+  margin: 0;
+  text-align: center;
+  border: 0;
+  font-size: 49px;
+  text-transform: uppercase;
+}
+.cube-types-description {
+  text-align: center;
+  margin: 0 30vw;
+}
+
+.cube-type-cards-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+}
+
+.cube-type-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 30px;
+  padding: 20px 10px;
+  height: fit-content;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cube-type-card h3 {
+  margin: 0;
+  font-size: 32px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.cube-type-card p {
+  margin: 20px 10% 0 10%;
+  font-size: 20px;
+}
