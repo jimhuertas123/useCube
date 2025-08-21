@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -47,6 +48,7 @@ p {
   object-fit: cover;
   height: 80%;
 }
+
 .header-nav-left span {
   width: 50%;
   object-fit: cover;
@@ -62,6 +64,7 @@ p {
   margin-right: 1.2rem;
   display: flex;
 }
+
 .header-nav-links a {
   font-weight: 400;
   font-size: 17px;
@@ -104,25 +107,30 @@ p {
     height: auto;
     padding: 10px 0;
   }
+
   .header-nav-left {
     margin-left: 0;
   }
+
   .header-nav-left img,
   .header-nav-left span {
     width: 30px;
     height: 30px;
     left: 0;
   }
+
   .header-nav-right {
     margin: 0;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
   .header-nav-links a {
     margin: 10px 1.2rem;
     font-size: 15px;
   }
+
   .header-play-button {
     padding: 8px 30px;
     font-size: 14px;
@@ -155,6 +163,7 @@ p {
   margin: auto;
   padding-left: 40px;
 }
+
 .main-text-content h2 {
   font-size: 60px;
   margin: 0;
@@ -175,9 +184,11 @@ p {
   .main-text-content h2 {
     font-size: 5vw;
   }
+
   .main-rubiks-cube-image {
     width: 20vw;
   }
+
   .main-text-content p {
     font-size: 1.1rem;
   }
@@ -192,22 +203,26 @@ p {
     margin: 0;
     justify-items: center;
   }
+
   .main-text-content {
     grid-column: 1;
     margin: 0 5px;
     text-align: center;
   }
+
   .main-text-content h2 {
     font-size: 28px;
     line-height: 1.2;
     word-break: break-word;
   }
+
   .main-text-content p {
     margin: 0 0 16px 0;
     font-size: 15px;
     line-height: 1.5;
     word-break: break-word;
   }
+
   .main-cube-image {
     grid-column: 1;
     width: 100%;
@@ -245,6 +260,7 @@ p {
   font-size: 49px;
   text-transform: uppercase;
 }
+
 .cube-types-description {
   text-align: center;
   margin: 0 30vw;
@@ -276,6 +292,7 @@ p {
   margin-top: 15px;
   font-weight: 500;
 }
+
 .cube-type-card p {
   margin: 20px 10% 0 10%;
   font-size: 20px;
