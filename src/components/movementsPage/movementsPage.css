@@ -1,0 +1,13 @@
+.movements-page-container {
+    margin-top: 90px;
+    width: 100vw;
+    height: fit-content;
+}
+
+@media screen and (max-width: 1128px) {}
+
+@media screen and (max-width: 768px) {
+    .movements-page-container {
+        margin-top: 120px;
+    }
+}

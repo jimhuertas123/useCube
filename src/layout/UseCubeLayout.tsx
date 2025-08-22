@@ -4,7 +4,7 @@ import Logo from '../assets/logo.png';
 export const UseCubeLayout = ({ children }: { children: React.ReactNode }) => {
   const navItems = [
     { path: '/', label: 'Tutorial' },
-    { path: '/cube', label: "Rubik's Cube" },
+    { path: '/rubiks-cube', label: "Rubik's Cube" },
     { path: '/about', label: 'About Us' },
   ];
 

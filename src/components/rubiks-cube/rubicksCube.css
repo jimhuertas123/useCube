@@ -1,0 +1,13 @@
+.rubiks-cube-selector-container {
+    margin-top: 90px;
+    width: 100vw;
+    height: fit-content;
+}
+
+@media screen and (max-width: 1128px) {}
+
+@media screen and (max-width: 768px) {
+    .rubiks-cube-selector-container {
+        margin-top: 150px;
+    }
+}
