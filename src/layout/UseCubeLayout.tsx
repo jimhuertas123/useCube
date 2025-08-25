@@ -1,11 +1,12 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 
 export const UseCubeLayout = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
   const navItems = [
     { path: '/', label: 'Tutorial' },
     { path: '/rubiks-cube', label: "Rubik's Cube" },
-    { path: '/about', label: 'About Us' },
+    { path: '/movements', label: 'Movements' },
   ];
 
   return (
@@ -27,9 +28,11 @@ export const UseCubeLayout = ({ children }: { children: React.ReactNode }) => {
               </NavLink>
             ))}
           </nav>
-          <button type="button" className="header-play-button">
-            PLAY
-          </button>
+          <Link to={'/rubiks-cube'}>
+            <button disabled={!location.pathname.startsWith('/rubiks-cube') ? false : true} type="button" className="header-play-button">
+              PLAY
+            </button>
+          </Link>
         </div>
       </header>
       <main>{children}</main>

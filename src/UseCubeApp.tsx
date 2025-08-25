@@ -35,21 +35,21 @@ export default function UseCubeApp() {
         </p>
         <div className="cube-type-cards-container">
           <CubeTypeCards
-            linkTo='/rubiks-cube/2x2'
+            linkTo='/movements/2x2'
             className="cube-type-card"
             cubetype='2x2'
             title="2x2 CUBE"
             description="Learn the movements and parts of a 2x2 cube, as well as how to scramble it!"
           />
           <CubeTypeCards
-            linkTo='/rubiks-cube/3x3'
+            linkTo='/movements/3x3'
             className="cube-type-card"
             cubetype='3x3'
             title="3x3 CUBE"
             description="Learn the movements and parts of a 3x3 cube, as well as how to scramble it!"
           />
           <CubeTypeCards
-            linkTo='/rubiks-cube/4x4'
+            linkTo='/movements/4x4'
             className="cube-type-card"
             cubetype='4x4'
             title="4x4 CUBE"
@@ -67,7 +67,7 @@ export default function UseCubeApp() {
           <div className='device-cube-parts-corner'>
             <div className='device-cube-parts-content'>
               <h3>Corners</h3>
-              <p>Consists of two colors that cannot be separated from each other</p>
+              <p>Consists of two colors that cannot be separated from each other (2x2 doesn't have corners)</p>
             </div>
             <img src={CubeCorners} alt="Cube Corners" />
           </div>

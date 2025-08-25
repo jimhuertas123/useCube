@@ -10,7 +10,8 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<UseCubeApp />} />
-        <Route path="/about" element={<MovementsPage />} />
+        <Route path="/movements/:cubeType" element={<MovementsPage />} />
+        <Route path="/movements" element={<Navigate to="/movements/3x3" />} />
         <Route path="/rubiks-cube/:cubeType" element={<RubiksCube />} />
         <Route path="/rubiks-cube" element={<Navigate to="/rubiks-cube/3x3" />} />
       </Routes>
