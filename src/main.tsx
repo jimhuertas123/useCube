@@ -1,17 +1,19 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import UseCubeApp from './UseCubeApp.tsx';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { RubiksCube } from './components/rubiks-cube/RubiksCube.tsx';
-import { AboutUs } from './components/about-us/AboutUs.tsx';
+import { MovementsPage } from './components/movementsPage/MovementsPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<UseCubeApp />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/cube" element={<RubiksCube />} />
+        <Route path="/movements/:cubeType" element={<MovementsPage />} />
+        <Route path="/movements" element={<Navigate to="/movements/3x3" />} />
+        <Route path="/rubiks-cube/:cubeType" element={<RubiksCube />} />
+        <Route path="/rubiks-cube" element={<Navigate to="/rubiks-cube/3x3" />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
