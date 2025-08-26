@@ -3,7 +3,7 @@ import { UseCubeLayout } from '../../layout/UseCubeLayout';
 import './movementsPage.css'
 import { useEffect, useState } from 'react';
 import Notation3x3 from '../../assets/movements/3x3-moves.webp'
-import Notation4x4 from '../../assets/movements/4x4-moves.png'
+import Notation4x4 from '../../assets/movements/4x4-moves.webp'
 import Notation2x2 from '../../assets/movements/2x2-moves.png'
 import { ThreeDRubiksCube } from '../rubiks-cube/3DRubiksCube';
 
@@ -47,6 +47,8 @@ export const MovementsPage = () => {
           <div className="notation-mode-switch-container">
             <label className="notation-switch">
               <input
+                id='notation-switch'
+                name='notation'
                 type="checkbox"
                 checked={notationMode === '3d'}
                 onChange={e => setNotationMode(e.target.checked ? '3d' : '2d')}

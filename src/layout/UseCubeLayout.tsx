@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import Logo from '../assets/logo.png';
-import LogoFooter from '../assets/logo-footer.png';
+import Logo from '../assets/logo.webp';
+import LogoFooter from '../assets/logo-footer.webp';
 
 export const UseCubeLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();

@@ -1,5 +1,4 @@
 import type { ComponentProps } from 'react';
-import '../../assets/components/cubeTypeCards.css';
 import { Link } from 'react-router-dom';
 
 export const CubeTypeCards = ({

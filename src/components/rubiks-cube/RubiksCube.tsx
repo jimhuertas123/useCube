@@ -76,12 +76,12 @@ export const RubiksCube = () => {
           onChange={(e) => handleCubeChange(e.target.value as CubeType)}
           disabled={!scrambledCube}
         >
-          <option value="2x2">2x2 Cube</option>
-          <option value="3x3">3x3 Cube</option>
-          <option value="4x4">4x4 Cube</option>
+          <option label='2x2 Cube' value="2x2">2x2 Cube</option>
+          <option label='3x3 Cube' value="3x3">3x3 Cube</option>
+          <option label='4x4 Cube' value="4x4">4x4 Cube</option>
         </select>
         <div className='scramble-input-container'>
-          <input value={inputScrambleValue} onChange={handleScrambleValueChange} className='scramble-input' type="text" />
+          <input id='scramble-input' name='scramble' value={inputScrambleValue} onChange={handleScrambleValueChange} className='scramble-input' type="text" />
           <button onClick={handleGenerateNewScramble}>Generate Scramble</button>
 
           {cubeType === '3x3' ? (

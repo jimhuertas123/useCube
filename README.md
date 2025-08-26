@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# UseCube
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern Rubik's Cube web app for speedcubers and puzzle enthusiasts. Built with React, TypeScript, and Vite, UseCube offers interactive 2D/3D cube visualization, scramble generation, responsive layouts, advanced input validation, and smooth animations.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **2D & 3D Cube Visualization:** Switch between classic 2D and immersive 3D views for any cube type (2x2, 3x3, 4x4).
+- **Scramble Generator:** Instantly generate valid scrambles for your selected cube.
+- **Step-by-Step Animation:** Watch cube moves animate in real time, or use buttons to practice algorithms.
+- **Responsive Design:** Works beautifully on desktop and mobile.
+- **Advanced Input Validation:** Ensures only valid Rubik's Cube notation is accepted.
+- **Compound Component Pattern:** Clean, maintainable React architecture for cube and controls.
+- **Modern UI:** Stylish, intuitive interface with curved borders, gradients, and smooth transitions.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js (v18+ recommended)
+- Yarn or npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### Installation
+```bash
+git clone https://github.com/jimhuertas123/useCube.git
+cd useCube
+yarn install # or npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### Development
+```bash
+yarn dev # or npm run dev
 ```
+App runs at `http://localhost:5173` by default.
+
+### Build
+```bash
+yarn build # or npm run build
+```
+Static files will be output to `/dist`.
+
+## Usage
+
+- Select your cube type and scramble mode.
+- Use the toggle to switch between 2D and 3D views (3x3 only for 3D).
+- Enter a scramble manually or generate one.
+- Use the movement buttons to practice algorithms step-by-step.
+- Reset or undo moves as needed.
+
+## Tech Stack
+
+- **React** (with hooks and context)
+- **TypeScript**
+- **Vite** (fast build and HMR)
+- **CSS Grid & Flexbox** (responsive layouts)
+- **Custom Web Components** (for 3D cube)
+
+## Project Structure
+
+- `/src/components` — Main UI components (cube, buttons, layout)
+- `/src/hooks` — Custom React hooks (scramble generator, etc.)
+- `/src/layout` — App layout and navigation
+- `/public` — Static assets (icons, images)
+
+## Credits
+
+- Developed by [jimhuertas123](https://github.com/jimhuertas123)
+- Took inpiration from: [CROVEX ♡](https://www.figma.com/community/file/1219679529682100950)
+
+## License
+
+MIT

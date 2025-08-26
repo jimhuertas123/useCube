@@ -1,0 +1,1 @@
+A modern Rubik's Cube web app built with React, TypeScript, and Vite. Features include interactive 2D/3D cube visualization, scramble generation, responsive layouts, advanced input validation, and smooth animations. Designed for speedcubers and puzzle enthusiasts to learn, practice, and explore cube movements with a beautiful, intuitive UI.

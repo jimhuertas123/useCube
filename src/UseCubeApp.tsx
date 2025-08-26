@@ -1,6 +1,6 @@
 import { UseCubeLayout } from './layout/UseCubeLayout';
 import './UseCubeApp.css';
-import CubeImg from './assets/kubik.png';
+import CubeImg from './assets/kubik.webp';
 import CubeImg2 from './assets/kubik2.png';
 import { CubeTypeCards } from './components/tutorial/CubeTypeCards';
 import CubeCorners from './assets/cube-corners.png';
