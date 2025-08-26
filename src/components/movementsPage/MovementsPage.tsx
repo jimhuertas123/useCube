@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Notation3x3 from '../../assets/movements/3x3-moves.webp'
 import Notation4x4 from '../../assets/movements/4x4-moves.png'
 import Notation2x2 from '../../assets/movements/2x2-moves.png'
+import { ThreeDRubiksCube } from '../rubiks-cube/3DRubiksCube';
 
 
 export const MovementsPage = () => {
@@ -63,9 +64,9 @@ export const MovementsPage = () => {
 
       }
 
-      {cubeType === '3x3' && (
+      {cubeType === '3x3' && notationMode === '2d' && (
         <div className='movements-page-content'>
-          <img src={notationMode === '2d' ? Notation3x3 : Notation3x3} alt="3x3 Cube Notation" />
+          <img src={Notation3x3} alt="3x3 Cube Notation" />
           <ul>
             <li><strong>R</strong> - Right face clockwise</li>
             <li><strong>R'</strong> - Right face counterclockwise</li>
@@ -81,6 +82,13 @@ export const MovementsPage = () => {
             <li><strong>B'</strong> - Back face counterclockwise</li>
           </ul>
         </div>
+      )}
+
+      {cubeType === '3x3' && notationMode === '3d' && (
+        <ThreeDRubiksCube delay={0}>
+          <ThreeDRubiksCube.Cube className='buttonsSize' />
+          <ThreeDRubiksCube.Buttons />
+        </ThreeDRubiksCube>
       )}
 
       {cubeType === '2x2' &&

@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { applyScramble, DisplayCube, generateScramble, type Cube } from 'react-rubiks-cube-utils';
 import { useDisplaySize } from '../../hooks/useDisplaySize';
 import useScrambleGenerator from '../../hooks/useScrambleGenerator';
+import { ThreeDRubiksCube } from './3DRubiksCube';
 
 export const RubiksCube = () => {
 
@@ -19,6 +20,7 @@ export const RubiksCube = () => {
   const handleCubeChange = (newCubeType: CubeType) => {
     setScrambledCube(null);
     setSelectedCube(newCubeType);
+    setInputScrambleValue('');
     navigate(`/rubiks-cube/${newCubeType}`);
   };
 
@@ -36,15 +38,11 @@ export const RubiksCube = () => {
   };
 
   useEffect(() => {
-    setInputScrambleValue(scramble);
-  }, [scramble]);
-
-  useEffect(() => {
     setScrambledCube(null);
 
     const newScrambledCube: Cube = applyScramble({ type: selectedCube ?? '3x3', scramble });
     setScrambledCube(newScrambledCube);
-    console.log(newScrambledCube);
+    console.count('render again');
 
 
   }, [selectedCube, scramble]);
@@ -56,9 +54,14 @@ export const RubiksCube = () => {
 
   const handleGenerateNewScramble = () => {
     if (selectedCube && scrambledCube) {
-      const newScramble = generateScramble({ type: selectedCube });
-      setInputScrambleValue(newScramble);
-      handleScrambleChange(newScramble);
+      setInputScrambleValue('');
+      handleScrambleChange('');
+
+      setTimeout(() => {
+        const newScramble = generateScramble({ type: selectedCube });
+        setInputScrambleValue(newScramble);
+        handleScrambleChange(newScramble);
+      }, 200);
     }
   };
 
@@ -81,9 +84,6 @@ export const RubiksCube = () => {
           <input value={inputScrambleValue} onChange={handleScrambleValueChange} className='scramble-input' type="text" />
           <button onClick={handleGenerateNewScramble}>Generate Scramble</button>
 
-          {/* <input value={inputScrambleSolution} style={{ textTransform: 'uppercase' }} onChange={handleScrambleValueChange} className='scramble-solution-input' type="text" />
-          <button onClick={handleSolveCube}>Solve Cube</button> */}
-
           {cubeType === '3x3' ? (
             <div className="notation-mode-switch-container">
               <label className="notation-switch">
@@ -104,19 +104,21 @@ export const RubiksCube = () => {
         </div>
 
         <div className="rubiks-cube-display-container">
-          {!scrambledCube && !displaySmall ? (
+          {!scrambledCube ? (
             <div className="cube-loading-container">
               <div className="cube-loading-spinner"></div>
-              <p> {error} </p>
+              <p>{error}</p>
             </div>
-          ) : (
-            scrambledCube && (
-              <DisplayCube
-                cube={scrambledCube}
-                size={propSizeCube[selectedCube as keyof typeof propSizeCube]}
-              />
-            )
-          )}
+          ) : cubeType === '3x3' && cubeDimension === '3d' ? (
+            <ThreeDRubiksCube delay={100} moves={inputScrambleValue}>
+              <ThreeDRubiksCube.Cube className="three-d-rubiks-cube.buttons" />
+            </ThreeDRubiksCube>
+          ) : scrambledCube ? (
+            <DisplayCube
+              cube={scrambledCube}
+              size={propSizeCube[selectedCube as keyof typeof propSizeCube]}
+            />
+          ) : null}
         </div>
       </div>
     </UseCubeLayout>

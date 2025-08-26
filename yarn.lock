@@ -408,6 +408,14 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
+"@houstonp/rubiks-cube@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@houstonp/rubiks-cube/-/rubiks-cube-1.1.1.tgz#c13537699d50abbd34804afc4670e2a19d0c4a20"
+  integrity sha512-3ugT57KG3OpmC2qPx4F1zG5VHvkPp3W0vOJ7TcGk02Ly0+UGAdEFgPGHzbcAWwj9tx5RdZjKiVo4NPtrx1/gng==
+  dependencies:
+    "@tweenjs/tween.js" "^25.0.0"
+    three "^0.167.1"
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
@@ -671,6 +679,11 @@
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
+
+"@tweenjs/tween.js@^25.0.0":
+  version "25.0.0"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-25.0.0.tgz#7266baebcc3affe62a3a54318a3ea82d904cd0b9"
+  integrity sha512-XKLA6syeBUaPzx4j3qwMqzzq+V4uo72BnlbOjmuljLrRqdsd3qnzvZZoxvMHZ23ndsRS4aufU6JOZYpCbU6T1A==
 
 "@types/babel__core@^7.20.5":
   version "7.20.5"
@@ -2350,6 +2363,11 @@ tar@^7.4.0:
     minizlib "^3.0.1"
     mkdirp "^3.0.1"
     yallist "^5.0.0"
+
+three@^0.167.1:
+  version "0.167.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.167.1.tgz#3fe4ba2b0a03fd662afe4977a56803d955b61689"
+  integrity sha512-gYTLJA/UQip6J/tJvl91YYqlZF47+D/kxiWrbTon35ZHlXEN0VOo+Qke2walF1/x92v55H6enomymg4Dak52kw==
 
 time-span@4.0.0:
   version "4.0.0"
